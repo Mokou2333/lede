@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: 第二次
+name: 第三次
 
 on:
   push:
@@ -51,7 +51,12 @@ jobs:
           git clone https://github.com/Ameykyl/luci-app-koolproxyR.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
-          git clone https://github.com/Lienol/openwrt-package.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-theme-argon-mod.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-app-passwall.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-app-trojan-server.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-theme-bootstrap-mod.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-app-v2ray-server.git
+          git clone https://github.com/Lienol/openwrt-package/tree/master/lienol/luci-app-ssr-libev-server.git
           
 
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
@@ -180,6 +185,10 @@ jobs:
           CONFIG_PACKAGE_luci-app-upnp=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-vnstat=y
+          CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-trojan-server=y
+          CONFIG_PACKAGE_luci-app-v2ray-server=y
+          CONFIG_PACKAGE_luci-app-ssr-libev-server=y
           EOF
 
           # LuCI主题:
@@ -188,6 +197,8 @@ jobs:
           CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-theme-rosy=y
           CONFIG_PACKAGE_luci-theme-atmaterial=y
+          CONFIG_PACKAGE_luci-theme-argon-mod=y
+          CONFIG_PACKAGE_luci-theme-bootstrap-mod=y
           EOF
 
           # 常用软件包:
