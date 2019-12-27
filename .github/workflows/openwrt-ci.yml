@@ -48,7 +48,6 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone https://github.com/Ameykyl/luci-app-koolproxyR.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           
@@ -172,11 +171,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-mwan=y
-          CONFIG_PACKAGE_luci-app-mwan3=y
-          CONFIG_PACKAGE_luci-app-statistics=y
-          CONFIG_PACKAGE_luci-app-koolproxyR=y
-          CONFIG_PACKAGE_luci-app-vnstat=y
           EOF
 
           # LuCI主题:
